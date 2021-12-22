@@ -12,8 +12,8 @@ const IndexPage = () => {
       <title>Home Page</title>
 
       <section className="w-screen h-screen px-40 font-roboto text-white">
-        <div className="w-full h-full flex flex-col justify-center items-start">
-          <div className="w-max h-max font-bold text-5xl">
+        <div className="px-40 w-full h-full flex flex-col justify-center items-start">
+          <div className="w-max h-max font-bold text-7xl leading-tight">
             <h1>Jason Keung.</h1>
             <h2 className="text-blue-gray">
               Electronic and Full Stack Engineer
@@ -30,8 +30,8 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="w-full relative">
-          <div className="absolute bottom-0 w-full h-max ">
-            <div className="w-max h-max mx-auto">
+          <div className="absolute -bottom-3 w-full h-max -rotate-45">
+            <div className="w-max h-max mx-auto ">
               <IoMdArrowRoundDown color="white" size="100" />
             </div>
           </div>
