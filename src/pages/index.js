@@ -1,6 +1,9 @@
 import * as React from "react";
-import SquareButton from "../components/SquareButton";
-import { IoMdArrowRoundDown } from "react-icons/io";
+
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import About from "../components/About";
+
 import "../css/index.css";
 
 // data
@@ -8,35 +11,14 @@ import "../css/index.css";
 // markup
 const IndexPage = () => {
   return (
-    <main className="w-screen min-h-screen bg-dark-gray">
+    <main className="w-screen min-h-screen bg-dark-gray text-white">
       <title>Home Page</title>
 
-      <section className="w-screen h-screen px-40 font-roboto text-white">
-        <div className="px-40 w-full h-full flex flex-col justify-center items-start">
-          <div className="w-max h-max font-bold text-7xl leading-tight">
-            <h1>Jason Keung.</h1>
-            <h2 className="text-blue-gray">
-              Electronic and Full Stack Engineer
-            </h2>
-            <div className="mt-10 flex items-center gap-2">
-              <p className="text-blue-gray text-sm">Check out my other </p>
-              <SquareButton
-                border="border-vibrant-orange"
-                text="text-vibrant-orange"
-              >
-                stuff
-              </SquareButton>
-            </div>
-          </div>
-        </div>
-        <div className="w-full relative">
-          <div className="absolute -bottom-3 w-full h-max -rotate-45">
-            <div className="w-max h-max mx-auto ">
-              <IoMdArrowRoundDown color="white" size="100" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <Layout>
+        <Hero />
+        <About />
+      </Layout>
+      
     </main>
   );
 };

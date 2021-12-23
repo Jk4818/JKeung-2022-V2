@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -16,9 +18,39 @@ module.exports = {
         'massive': ['16rem', {
           lineHeight: 1
         }],
+        dynamic: "clamp(1.5rem, 5vw, 5rem)",
+      },
+      letterSpacing: {
+        logo: '0.4rem',
       }
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities, addComponents, e, prefix, config }) {
+      const newUtilities = {
+        '.horizontal-tb': {
+          writingMode: 'horizontal-tb',
+        },
+        '.vertical-rl': {
+          writingMode: 'vertical-rl'
+        },
+        '.vertical-lr': {
+          writingMode: 'vertical-lr'
+        }
+      }
+      addUtilities(newUtilities)
+    }),
+    plugin(function({ addUtilities, theme, variants }) {
+      const newUtilities = {
+        '.flip-horizontal': {
+          '--transform-scale-x': '-1',
+        },
+        '.flip-vertical': {
+          '--transform-scale-y': '-1',
+        },
+      }
+      addUtilities(newUtilities, variants('flip'))
+    }),
+  ],
 };
