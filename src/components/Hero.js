@@ -4,13 +4,13 @@ import { IoMdArrowRoundDown } from "react-icons/io";
 
 function Hero(props) {
   return (
-    <section className="overflow-x-hidden w-screen h-screen font-roboto text-white">
+    <section id="home" className=" w-screen h-screen font-roboto text-white">
       <div className="w-screen h-screen px-4 sm:pl-28 lg:pl-44 2xl:pl-60">
         <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="w-full h-max font-bold text-dynamic leading-tight">
-            <h1>Jason Keung.</h1>
-            <h2 className="break-words text-blue-gray">
-              Electronic and Full Stack Engineer
+            <h1 className="w-max">Jason Keung.</h1>
+            <h2 className="break-words text-blue-gray w-max">
+              <span className="link link-underline link-underline-black">Electronic</span> and <span className="link link-underline link-underline-black">Full Stack</span> Engineer
             </h2>
             <div className="mt-10 flex flex-wrap items-center gap-2">
               <p className="text-blue-gray text-sm">Check out my other </p>

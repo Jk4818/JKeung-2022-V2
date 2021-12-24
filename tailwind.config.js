@@ -1,6 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
+  mode: 'jit',
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -22,6 +23,9 @@ module.exports = {
       },
       letterSpacing: {
         logo: '0.4rem',
+      },
+      boxShadow: {
+        'container': '0 0 50px rgba(0, 0, 0, 0.5)',
       }
     }
   },
@@ -40,17 +44,6 @@ module.exports = {
         }
       }
       addUtilities(newUtilities)
-    }),
-    plugin(function({ addUtilities, theme, variants }) {
-      const newUtilities = {
-        '.flip-horizontal': {
-          '--transform-scale-x': '-1',
-        },
-        '.flip-vertical': {
-          '--transform-scale-y': '-1',
-        },
-      }
-      addUtilities(newUtilities, variants('flip'))
     }),
   ],
 };
