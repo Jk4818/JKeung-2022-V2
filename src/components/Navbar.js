@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
+import { window, document } from 'browser-monads';
 import scrollTo from "gatsby-plugin-smoothscroll";
 
 import Logo from "./Logo";
