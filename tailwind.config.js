@@ -20,6 +20,7 @@ module.exports = {
           lineHeight: 1
         }],
         dynamic: "clamp(1.5rem, 5vw, 5rem)",
+        'dynamic-small': "clamp(1rem, 3vw, 2rem)",
       },
       letterSpacing: {
         logo: '0.4rem',
