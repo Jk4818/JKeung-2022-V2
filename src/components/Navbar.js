@@ -16,7 +16,7 @@ function Navbar(props) {
     if (state) {
       console.log(true);
       document.documentElement.style.overflow = "hidden";
-    } else{
+    } else {
       document.documentElement.style.overflow = "visible";
     }
   }
@@ -41,10 +41,18 @@ function Navbar(props) {
   );
 
   useEffect(() => {
+    function handleViewport() {
+      if (document.documentElement.clientWidth >= 768) {
+        document.documentElement.style.overflow = "visible";
+        setClicked(false);
+      }
+    }
     window.addEventListener("scroll", handleNavigation);
+    window.addEventListener("resize", handleViewport);
 
     return () => {
       window.removeEventListener("scroll", handleNavigation);
+      window.addEventListener("resize", handleViewport);
     };
   }, [handleNavigation]);
 

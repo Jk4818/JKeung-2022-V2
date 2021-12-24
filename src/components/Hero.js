@@ -8,8 +8,8 @@ function Hero(props) {
       <div className="w-screen h-screen px-10  sm:pl-20 lg:pl-44 2xl:pl-60">
         <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="w-full h-max font-bold text-dynamic leading-tight">
-            <h1 className="w-max">Jason Keung.</h1>
-            <h2 className="text-blue-gray w-max">
+            <h1 className="w-full">Jason Keung.</h1>
+            <h2 className="text-blue-gray w-full">
               <span className="link link-underline link-underline-black">Electronic</span> and <span className="link link-underline link-underline-black">Full Stack</span> Engineer
             </h2>
             <div className="mt-10 flex flex-wrap items-center gap-2">

@@ -8,9 +8,9 @@ function About(props) {
           01.
         </h1>
       </div>
-      <div className="relative w-full h-full px-10 sm:px-20 lg:px-40 xl:px-80 flex justify-center items-center z-10">
+      <div className="relative w-full h-full px-5 sm:px-20 lg:px-40 xl:px-80 flex justify-center items-center z-10">
 
-        <div className="w-full h-3/4 md:w-full md:h-1/2 flex flex-col md:flex-row justify-end shadow-container shadow-black">
+        <div className="w-full h-full md:h-1/2 flex flex-col md:flex-row justify-end shadow-container shadow-black">
 
           <div className="container w-full h-1/2 md:w-1/2 md:h-full p-10 lg:p-20 bg-white self-start flex flex-col justify-center font-roboto text-p-gray">
               <h2 className="w-max font-bold text-2xl text-black link link-underline link-underline-black">About Me.</h2>

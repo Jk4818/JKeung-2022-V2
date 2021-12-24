@@ -19,7 +19,7 @@ module.exports = {
         'massive': ['16rem', {
           lineHeight: 1
         }],
-        dynamic: "clamp(1.5rem, 5vw, 5rem)",
+        dynamic: "clamp(2rem, 5vw, 5rem)",
         'dynamic-small': "clamp(1rem, 3vw, 2rem)",
       },
       letterSpacing: {
