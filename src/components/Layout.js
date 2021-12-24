@@ -15,10 +15,10 @@ function Layout({ children }) {
                 <p>Designed & Developed by Jason Keung 2022</p>
             </a>
             <span className="flex gap-5">
-                <a href="" className="hover:text-vibrant-orange transition-all">
+                <a href="https://github.com/Jk4818/JKeung-2022-V2" className="hover:text-vibrant-orange transition-all">
                     <FiGithub size="20"/>
                 </a>
-                <a href="" className="hover:text-vibrant-orange transition-all">
+                <a href="https://www.youtube.com/" className="hover:text-vibrant-orange transition-all">
                     <FiYoutube size="20" />
                 </a>
             </span>
