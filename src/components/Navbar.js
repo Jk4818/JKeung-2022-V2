@@ -131,8 +131,8 @@ function Navbar(props) {
       <div>
         <div
           className={`${
-            clicked ? "opacity-100 visible" : "opacity-0 -translate-x-full"
-          } fixed w-screen h-screen bg-dark-gray/30 backdrop-blur-sm z-30 md:opacity-0 md:-translate-x-full transition ease-in-out duration-300 `}
+            clicked ? "opacity-100" : "hidden"
+          } fixed w-screen h-screen bg-dark-gray/30 backdrop-blur-sm z-30 block md:hidden`}
         ></div>
         <div
           className={`${

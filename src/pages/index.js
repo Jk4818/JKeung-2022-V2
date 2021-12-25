@@ -6,6 +6,8 @@ import About from "../components/About";
 
 import "../css/index.css";
 import Experience from "../components/Experience";
+import ProjectsMain from "../components/ProjectsMain";
+import ProjectsMore from "../components/ProjectsMore";
 
 // data
 
@@ -19,6 +21,8 @@ const IndexPage = () => {
         <Hero />
         <About />
         <Experience />
+        <ProjectsMain />
+        <ProjectsMore />
       </Layout>
       
     </main>
