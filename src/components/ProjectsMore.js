@@ -1,12 +1,28 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby"
 import ProjectSmall from "./ProjectSmall";
 
 function ProjectsMore(props) {
-    const data = [
-        { id: 1, name: "John Doe" },
-        { id: 2, name: "Victor Wayne" },
-        { id: 3, name: "Jane Doe" },
-      ];
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+          edges {
+            node {
+              frontmatter {
+                title
+                date(formatString: "DD MMMM, YYYY")
+              }
+              timeToRead
+              excerpt
+              id
+            }
+          }
+        }
+      }
+    `
+  );
+
   return (
     <section className="relative w-full h-full font-roboto text-white ">
       <div>
@@ -14,10 +30,9 @@ function ProjectsMore(props) {
       </div>
 
       <div className="w-full h-96 flex flex-wrap justify-between gap-2 px-4 sm:px-20 lg:px-40 xl:px-80">
-        {data.map((project) => (
-          <ProjectSmall />
+      {data.allMarkdownRemark.edges.map((project) => (
+          <ProjectSmall key={project.node.id} title={project.node.frontmatter.title} content={project.node.excerpt} />
         ))}
-        <ProjectSmall />
       </div>
     </section>
   );

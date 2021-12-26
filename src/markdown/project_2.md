@@ -1,5 +1,5 @@
 ---
-title: "First Gatsby Blog Post"
+title: "2nd Gatsby Blog123 Post"
 date: "2020-01-18"
 ---
 

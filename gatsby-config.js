@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "JKeung 2022 V2",
+    title: "Jason Keung",
+    description: "Jason Keung | Professional Portfolio",
+    author: "Jason Keung",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -27,7 +29,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/`,
       },
       __key: "images",
     },

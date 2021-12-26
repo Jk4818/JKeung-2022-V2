@@ -8,6 +8,7 @@ import "../css/index.css";
 import Experience from "../components/Experience";
 import ProjectsMain from "../components/ProjectsMain";
 import ProjectsMore from "../components/ProjectsMore";
+import Contact from "../components/Contact";
 
 // data
 
@@ -23,6 +24,7 @@ const IndexPage = () => {
         <Experience />
         <ProjectsMain />
         <ProjectsMore />
+        <Contact />
       </Layout>
       
     </main>

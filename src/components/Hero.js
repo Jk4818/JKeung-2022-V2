@@ -1,14 +1,29 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby"
 import SquareButton from "../components/SquareButton";
 import { IoMdArrowRoundDown } from "react-icons/io";
 
 function Hero(props) {
+
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  );
   return (
     <section id="home" className=" w-screen h-screen font-roboto text-white">
       <div className="w-screen h-screen px-10  sm:pl-20 lg:pl-44 2xl:pl-60">
         <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="w-full h-max font-bold text-dynamic leading-tight">
-            <h1 className="w-full">Jason Keung.</h1>
+            <h1 className="w-full">{data.site.siteMetadata.author}</h1>
             <h2 className="text-blue-gray w-full">
               <span className="link link-underline link-underline-black">Electronic</span> and <span className="link link-underline link-underline-black">Full Stack</span> Engineer
             </h2>
