@@ -59,7 +59,7 @@ function Navbar(props) {
 
   return (
     <nav
-      className={`fixed overflow-hidden top-0 left-0 h-full w-full z-30 transition ease-in-out duration-300`}
+      className={`z-30 transition ease-in-out duration-300`}
     >
       <button
         className={`${
@@ -129,11 +129,11 @@ function Navbar(props) {
       </div>
 
       <div>
-        <div
+        {/* <div
           className={`${
             clicked ? "opacity-100" : "hidden"
           } fixed w-screen h-screen bg-dark-gray/30 backdrop-blur-sm z-30 block md:hidden`}
-        ></div>
+        ></div> */}
         <div
           className={`${
             clicked ? "opacity-100 shadow-container" : "translate-x-full"
