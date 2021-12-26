@@ -4,7 +4,7 @@ import Symbol from "../images/Symbol.svg";
 
 function Contact(props) {
   return (
-    <div className="relative w-full h-96 flex justify-center items-center">
+    <div id="contact" className="relative w-full h-96 flex justify-center items-center">
     <div className="absolute top-8 xl:left-32 w-max z-10">
       <h1 className="font-bold text-5xl text-white">Say Hello</h1>
     </div>

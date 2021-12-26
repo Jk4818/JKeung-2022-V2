@@ -16,7 +16,7 @@ function ProjectSmall({ children, title, tags }) {
       <p className="text-xs text-p-gray leading-relaxed">
         <div dangerouslySetInnerHTML={{ __html: children }}></div>
       </p>
-      <ul className="font-roboto-mono text-xs text-blue-gray flex flex-wrap justify-start gap-2">
+      <ul className="font-roboto-mono text-xs text-blue-gray flex flex-wrap justify-start self-end mt-auto gap-2">
         {tags.map((tag) => (
           <li>{tag}</li>
         ))}

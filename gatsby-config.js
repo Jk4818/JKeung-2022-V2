@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-postcss",
+    "gatsby-plugin-smoothscroll",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

@@ -64,7 +64,7 @@ function Navbar(props) {
       <button
         className={`${
           show && "-translate-y-[5rem]"
-        } fixed right-8 top-8 md:hidden z-50 transition ease-in-out duration-300`}
+        } w-max fixed right-8 top-8 md:hidden z-50 transition ease-in-out duration-300`}
         onClick={() => handleClick(!clicked, null)}
       >
         <NavButton state={clicked} />
@@ -107,20 +107,30 @@ function Navbar(props) {
                 Experience.
               </li>
             </button>
-            <li
-              before="0.3 -"
-              className="before:content-[attr(before)] before:inline-block before:tracking-tight before:text-vibrant-orange"
+            <button
+              onClick={() => scrollTo("#main_projects")}
+              className="font-roboto font-medium tracking-widest"
             >
-              {" "}
-              Projects.
-            </li>
-            <li
-              before="0.4 -"
-              className="before:content-[attr(before)] before:inline-block before:tracking-tight before:text-vibrant-orange"
+              <li
+                before="0.3 -"
+                className="before:content-[attr(before)] before:inline-block before:text-vibrant-orange before:tracking-tight hover:text-vibrant-orange transition-all"
+              >
+                {" "}
+                Projects.
+              </li>
+            </button>
+            <button
+              onClick={() => scrollTo("#contact")}
+              className="font-roboto font-medium tracking-widest"
             >
-              {" "}
-              Contact.
-            </li>
+              <li
+                before="0.4 -"
+                className="before:content-[attr(before)] before:inline-block before:text-vibrant-orange before:tracking-tight hover:text-vibrant-orange transition-all"
+              >
+                {" "}
+                Contact.
+              </li>
+            </button>
             <div className="self-center ">
               <SquareButton color="white"> Resume </SquareButton>
             </div>
@@ -170,20 +180,30 @@ function Navbar(props) {
                   Experience.
                 </li>
               </button>
-              <li
-                before="0.3 -"
-                className="before:content-[attr(before)] before:inline-block before:text-vibrant-orange"
+              <button
+                onClick={() => handleClick(false, "#main_projects")}
+                className="font-roboto font-medium tracking-widest"
               >
-                {" "}
-                Projects.
-              </li>
-              <li
-                before="0.4 -"
-                className="before:content-[attr(before)] before:inline-block before:text-vibrant-orange"
+                <li
+                  before="0.3 -"
+                  className="before:content-[attr(before)] before:inline-block before:text-vibrant-orange hover:text-vibrant-orange transition-all"
+                >
+                  {" "}
+                  Projects.
+                </li>
+              </button>
+              <button
+                onClick={() => handleClick(false, "#contact")}
+                className="font-roboto font-medium tracking-widest"
               >
-                {" "}
-                Contact.
-              </li>
+                <li
+                  before="0.4 -"
+                  className="before:content-[attr(before)] before:inline-block before:text-vibrant-orange hover:text-vibrant-orange transition-all"
+                >
+                  {" "}
+                  Contact.
+                </li>
+              </button>
               <div className="self-center ">
                 <SquareButton color="white"> Resume </SquareButton>
               </div>
