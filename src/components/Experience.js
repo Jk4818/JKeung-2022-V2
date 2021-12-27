@@ -6,7 +6,7 @@ import AON from "../images/AON.svg";
 
 function Experience(props) {
   return (
-    <section id="experience" className="relative w-full mt-40 md:mt-0 h-max items-center justify-center font-roboto font-bold text-lg text-white">
+    <section id="experience" className="relative w-full mt-80 md:mt-0 h-max items-center justify-center font-roboto font-bold text-lg text-white">
       <div className="absolute -top-60 md:-top-48 md:right-0 xl:right-32 w-max z-0">
         <h1 className="font-bold text-massive text-blue-gray">02.</h1>
       </div>

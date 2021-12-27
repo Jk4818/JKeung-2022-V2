@@ -26,8 +26,8 @@ function ProjectsMore(props) {
   );
 
   return (
-    <section className="relative w-full h-full font-roboto text-white  px-4 sm:px-20 lg:px-40 xl:px-80 md:py-10">
-      <div className="flex items-center justify-between md:my-20">
+    <section className="relative w-full h-full font-roboto text-white  px-4 sm:px-20 lg:px-40 xl:px-80 py-10">
+      <div className="flex items-center justify-between my-20">
         <h1>Other Noteworthy Works</h1>
         <div className="w-40 h-1 bg-blue-gray"></div>
       </div>
