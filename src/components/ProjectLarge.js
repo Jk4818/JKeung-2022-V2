@@ -28,18 +28,26 @@ function ProjectLarge({type, children, title, topic, tags }) {
           {topic}
         </h2>
         <h1 className="text-lg md:text-md">{title}</h1>
+
         <div
-          className={`mt-6 w-full h-1/2 md:bg-dark-gray md:shadow-container ${
+          className={`mt-6 w-full h-full md:bg-dark-gray md:shadow-container md:items-center md:p-6 
+          ${
             type === "left" ? `md:text-right` : `md:text-left`
-          }  md:items-center md:p-6 `}
+          }`}
         >
-          <p className="w-full h-full mb-2 font-normal text-md md:text-sm text-light-gray md:text-p-gray ">
+          <div className="w-full h-full mb-2 font-normal text-md md:text-sm text-light-gray md:text-p-gray flex items-center">
             <div dangerouslySetInnerHTML={{ __html: children }}></div>
-          </p>
+          </div>
         </div>
-        <ul className="flex flex-wrap justify-start gap-4 md:self-end font-roboto-mono text-light-gray md:text-blue-gray text-sm font-medium mt-auto">
+
+        <ul className={`flex flex-wrap justify-start gap-4 leading-none font-roboto-mono text-light-gray md:text-blue-gray text-sm font-medium mt-auto
+        ${
+          type === "left" ? `md:self-start` : `md:self-end`
+        }
+        `}>
           {tags != null && tags.map((tag) => (
-            <li>{tag}</li>
+            <li
+            key={tag}>{tag}</li>
           ))}
         </ul>
       </div>

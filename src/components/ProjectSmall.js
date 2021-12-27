@@ -13,12 +13,13 @@ function ProjectSmall({ children, title, tags }) {
         />
       </div>
       <h1 className="font-bold text-lg text-center">{title}</h1>
-      <p className="text-xs text-p-gray leading-relaxed">
+      <div className="text-xs text-p-gray leading-relaxed">
         <div dangerouslySetInnerHTML={{ __html: children }}></div>
-      </p>
+      </div>
       <ul className="font-roboto-mono text-xs text-blue-gray flex flex-wrap justify-start self-end mt-auto gap-2">
-        {tags != null && tags.map((tag) => (
-          <li>{tag}</li>
+        {tags != null && tags.map((tag,index) => (
+          <li
+          key={index}>{tag}</li>
         ))}
       </ul>
     </div>

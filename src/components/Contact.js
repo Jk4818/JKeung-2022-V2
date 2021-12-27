@@ -6,9 +6,9 @@ function Contact(props) {
   return (
     <div
       id="contact"
-      className="relative w-full h-max flex flex-col sm:flex-row sm:justify-end md:gap-40 items-center  px-4 sm:px-20 lg:px-40 xl:px-80 my-20"
+      className="relative w-full h-max flex flex-col sm:flex-row sm:justify-evenly  items-center  px-4 my-20"
     >
-      <div className="relative sm:absolute left-0 xl:left-32  w-max z-0">
+      <div className="relative w-max z-0">
         <h1 className="absolute top-6 font-bold text-5xl text-white">Say Hello</h1>
         <h1 className="font-bold text-massive text-blue-gray">04.</h1>
       </div>

@@ -18,7 +18,7 @@ function ProjectsMore(props) {
 
   function handleKeyDown(ev, state) {
     // check keys if you want
-    if (ev.keyCode == 13) {
+    if (ev.keyCode === 13) {
       setShow(state);
       if (!state) {
         scrollTo("#more_projects");
@@ -63,19 +63,19 @@ function ProjectsMore(props) {
         className="w-full h-full grid sm:grid-cols-2 lg:grid-cols-3 gap-10"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         transition={{ duration: 0.2, staggerChildren: 0.1 }}
         animate={show ? "visible" : "hidden"}
       >
         {data.allMarkdownRemark.edges.slice(0, numberOfItems).map((project) => (
           <motion.div
+            key={project.node.id}
             variants={{
               visible: { opacity: 1, y: 0 },
               hidden: { opacity: 0, y: 50 },
             }}
           >
             <ProjectSmall
-              key={project.node.id}
               title={project.node.frontmatter.title}
               tags={project.node.frontmatter.tags}
             >
@@ -85,13 +85,14 @@ function ProjectsMore(props) {
         ))}
       </motion.div>
 
-      <div
-        id="scroll_more"
-        className={`flex justify-center mt-10`}
-        onClick={() => handleClick(!show)}
-        onKeyDown={(ev) => handleKeyDown(ev, !show)}
-      >
-        <RoundButton>{show ? "Show Less" : "Show More"}</RoundButton>
+      <div className={`flex justify-center mt-10`}>
+        <button
+          id="scroll_more"
+          onClick={() => handleClick(!show)}
+          onKeyDown={(ev) => handleKeyDown(ev, !show)}
+        >
+          <RoundButton>{show ? "Show Less" : "Show More"}</RoundButton>
+        </button>
       </div>
     </section>
   );

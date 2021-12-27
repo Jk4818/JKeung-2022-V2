@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { window, document } from 'browser-monads';
+import { window, document } from "browser-monads";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import { motion } from "framer-motion";
 
 import Logo from "./Logo";
 import SquareButton from "./SquareButton";
@@ -41,6 +42,11 @@ function Navbar(props) {
     [y]
   );
 
+  const variant = {
+    visible: { opacity: 1, y: 0 },
+    hidden: { opacity: 0, y: -10 },
+  };
+
   useEffect(() => {
     function handleViewport() {
       if (document.documentElement.clientWidth >= 768) {
@@ -58,32 +64,48 @@ function Navbar(props) {
   }, [handleNavigation]);
 
   return (
-    <nav
-      className={`z-30 transition ease-in-out duration-300`}
-    >
-      <button
+    <nav className={`z-30 transition ease-in-out duration-300`}>
+
+      <motion.button
+          initial="hidden"
+          animate="visible"
+          variants={variant}
         className={`${
           show && "-translate-y-[5rem]"
-        } w-max fixed right-8 top-8 md:hidden z-50 transition ease-in-out duration-300`}
+        } w-max flex justify-center items-center fixed right-10 top-8 md:hidden z-50 transition ease-in-out duration-300`}
         onClick={() => handleClick(!clicked, null)}
       >
         <NavButton state={clicked} />
-      </button>
+      </motion.button>
+
+
       <div
         className={` ${show && "-translate-y-full shadow-none"}  ${
           reachedTop && "shadow-none"
-        } h-24 w-full px-14 fixed top-0 flex gap-0 items-center text-xs font-roboto  bg-dark-gray/90 backdrop-blur-md shadow-container z-30 transition ease-in-out duration-300`}
+        } h-24 w-full px-10 md:px-14 fixed top-0 flex gap-0 items-center text-xs font-roboto  bg-dark-gray/90 backdrop-blur-md shadow-container z-30 transition ease-in-out duration-300`}
       >
-        <div className="self-center">
+        <motion.div
+          className="self-center"
+          initial="hidden"
+          animate="visible"
+          variants={variant}
+        >
           <button className="w-max" onClick={() => scrollTo("#home")}>
             <Logo />
           </button>
-        </div>
+        </motion.div>
         <div
           className={`w-full hidden md:visible md:flex items-center justify-end  transition-all`}
         >
-          <ul className="w-max h-max flex flex-row items-center gap-12 md:gap-6 tracking-widest ">
-            <button
+          <motion.ul
+            className="w-max h-max flex flex-row items-center gap-12 md:gap-6 tracking-widest "
+            initial="hidden"
+            animate="visible"
+            variants={variant}
+            transition={{ duration: 0.8, staggerChildren: 0.2 }}
+          >
+            <motion.button
+              variants={variant}
               onClick={() => scrollTo("#about")}
               className="font-roboto font-medium tracking-widest"
             >
@@ -94,8 +116,9 @@ function Navbar(props) {
                 {" "}
                 About.
               </li>
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              variants={variant}
               onClick={() => scrollTo("#experience")}
               className="font-roboto font-medium tracking-widest"
             >
@@ -106,8 +129,9 @@ function Navbar(props) {
                 {" "}
                 Experience.
               </li>
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              variants={variant}
               onClick={() => scrollTo("#main_projects")}
               className="font-roboto font-medium tracking-widest"
             >
@@ -118,8 +142,9 @@ function Navbar(props) {
                 {" "}
                 Projects.
               </li>
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              variants={variant}
               onClick={() => scrollTo("#contact")}
               className="font-roboto font-medium tracking-widest"
             >
@@ -130,11 +155,11 @@ function Navbar(props) {
                 {" "}
                 Contact.
               </li>
-            </button>
-            <div className="self-center ">
+            </motion.button>
+            <motion.div className="self-center " variants={variant}>
               <SquareButton color="white"> Resume </SquareButton>
-            </div>
-          </ul>
+            </motion.div>
+          </motion.ul>
         </div>
       </div>
 
