@@ -65,18 +65,15 @@ function Navbar(props) {
 
   return (
     <nav className={`z-30 transition ease-in-out duration-300`}>
-
-      <motion.button
-          initial="hidden"
-          animate="visible"
-          variants={variant}
+      
+      <button
         className={`${
           show && "-translate-y-[5rem]"
         } w-max flex justify-center items-center fixed right-10 top-8 md:hidden z-50 transition ease-in-out duration-300`}
         onClick={() => handleClick(!clicked, null)}
       >
         <NavButton state={clicked} />
-      </motion.button>
+      </button>
 
 
       <div
