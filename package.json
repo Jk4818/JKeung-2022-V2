@@ -16,6 +16,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "browser-monads": "^1.0.0",
+    "framer-motion": "^5.5.5",
     "gatsby": "^4.4.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",

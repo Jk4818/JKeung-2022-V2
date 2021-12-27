@@ -4,7 +4,7 @@ import RoundButton from "./RoundButton";
 
 function ProjectSmall({ children, title, tags }) {
   return (
-    <div className="w-80 h-max aspect-square flex flex-col gap-4 p-6 px-8 bg-dark-gray rounded-xl shadow-container hover:-translate-y-2 transition-all">
+    <div className="w-full h-max aspect-square flex flex-col gap-4 p-6 px-8 bg-dark-gray rounded-xl shadow-container hover:-translate-y-2 transition-all">
       <div className="flex justify-between">
         <RoundButton>Learn More</RoundButton>
         <FiExternalLink
@@ -17,7 +17,7 @@ function ProjectSmall({ children, title, tags }) {
         <div dangerouslySetInnerHTML={{ __html: children }}></div>
       </p>
       <ul className="font-roboto-mono text-xs text-blue-gray flex flex-wrap justify-start self-end mt-auto gap-2">
-        {tags.map((tag) => (
+        {tags != null && tags.map((tag) => (
           <li>{tag}</li>
         ))}
       </ul>

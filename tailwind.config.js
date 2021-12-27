@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'light-gray': '#E5E5E5',
         'dark-gray': '#141413',
         'p-gray' : '#888888',
         'blue-gray' : '#6C757D',
@@ -27,7 +28,10 @@ module.exports = {
       },
       boxShadow: {
         'container': '0 0 50px rgba(0, 0, 0, 0.5)',
-      }
+      },
+      blur: {
+        xs: '2px',
+      },
     }
   },
   variants: {},
