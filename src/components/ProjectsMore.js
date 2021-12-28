@@ -29,7 +29,7 @@ function ProjectsMore(props) {
   let data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
+        allMarkdownRemark(filter: { frontmatter: { featured: { eq: false } } }) {
           edges {
             node {
               frontmatter {
