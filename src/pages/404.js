@@ -1,3 +1,4 @@
+import { Link } from "@reach/router";
 import React from "react";
 import SquareButton from "../components/SquareButton";
 
@@ -11,9 +12,9 @@ const NotFoundPage = () => {
       <p className="text-p-gray font-roboto-mono font-medium">
         You're accessing an unknown page :c
       </p>
-      <div className="mt-6">
-        <SquareButton color="white">Back to home</SquareButton>
-      </div>
+      <Link to="/" className="mt-6">
+        <SquareButton text="text-white">Back to home</SquareButton>
+      </Link>
     </main>
   );
 };

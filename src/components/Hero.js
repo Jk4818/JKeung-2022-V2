@@ -93,7 +93,7 @@ function Hero(props) {
           visible: { opacity: 1, y: 0 },
           hidden: { opacity: 0, y: 10 },
         }}
-        className="hidden md:block w-full fixed bottom-0"
+        className="hidden md:block w-full fixed bottom-0 z-10"
       >
         <div className="absolute w-max h-max bottom-0 right-auto left-10 flex flex-col justify-center items-center">
           <div className="w-0.5 h-28 bg-white"></div>

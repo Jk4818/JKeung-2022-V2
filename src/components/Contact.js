@@ -1,6 +1,6 @@
 import React from "react";
 import SquareButton from "../components/SquareButton";
-import Symbol from "../images/Symbol.svg";
+import Symbol from "../assets/Symbol.svg";
 
 function Contact(props) {
   return (
@@ -27,7 +27,7 @@ function Contact(props) {
       </div>
 
       <div className="hidden md:block w-40 z-30">
-        <img src={Symbol} alt="Symbol" />
+        <Symbol/>
       </div>
     </div>
   );

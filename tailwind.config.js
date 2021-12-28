@@ -32,6 +32,21 @@ module.exports = {
       blur: {
         xs: '2px',
       },
+      animation: {
+        'spin-slow': 'spin 100s linear infinite',
+        'spin-slow-1': 'spin 110s linear infinite',
+        'spin-slow-2': 'spin 125s linear infinite',
+        'spin-slow-3': 'spin 140s linear infinite',
+        'reverse-spin': 'reverse-spin 100s linear infinite',
+        'reverse-spin-1': 'reverse-spin 110s linear infinite',
+      },
+      keyframes: {
+        'reverse-spin': {
+          from: {
+            transform: 'rotate(360deg)'
+          },
+        }
+      }
     }
   },
   variants: {},
