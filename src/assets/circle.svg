@@ -2,9 +2,9 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
     <title>Description Spinny</title>
 <defs>
-    <path d="M243.2, 382.4c-74.8,   
-    0-135.5-60.7-135.5-135.5s60.7-135.5,135.5-135.5s135.5, 60.7, 135.5,
-    135.5 S318, 382.4, 243.2, 382.4z" id="textcircle" />
+    <path 
+              d="M250,400
+                 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z" id="textcircle" />
     <style>
         text { 
             font-size: 35px;
@@ -15,7 +15,7 @@
         }
     </style>
 </defs> 
-    <text dy="-70" textLength="1000">
+    <text dy="-70" textLength="800">
         <textPath xlink:href="#textcircle">
             Electronic Engineering - 2022. - Full Stack. - Front End. - Graduate.
         </textPath>
