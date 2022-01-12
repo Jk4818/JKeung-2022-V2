@@ -35,11 +35,10 @@ const IntroPage = ({pressed, setPressed, setAnimationEnd}) => {
         repeat: Infinity,
       },
     }),
-    end: i => ({
-      scale: [1, 17],
-      opacity: [1, 1,0],
+    end: i => ({ 
+      opacity: [1,0],
       transition: {
-        duration: 2,
+        duration: 1,
         ease: "anticipate",
       },
     }),
