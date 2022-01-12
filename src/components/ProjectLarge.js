@@ -1,7 +1,7 @@
 import React from "react";
-import ODDImage from "../images/odd.png";
+import Img from "gatsby-image"
 
-function ProjectLarge({type, children, title, topic, tags }) {
+function ProjectLarge({type, children, title, topic, tags, featuredImgFluid }) {
   return (
     <div className="relative flex w-full h-full justify-center md:grid md:grid-cols-10 font-bold font-roboto tracking-wide">
       <div
@@ -11,7 +11,7 @@ function ProjectLarge({type, children, title, topic, tags }) {
         }`}
       >
         <div className="after:bg-gradient-to-tr after:from-pink-500 after:via-red-500 after:to-yellow-500 after:aspect-square after:h-full after:block after:absolute after:inset-0 after:opacity-70">
-          <img className="w-full object-fit " src={ODDImage} alt="" />
+        <Img fluid={featuredImgFluid} />
         </div>
       </div>
 

@@ -6,7 +6,8 @@ import CircleText from "../assets/circle.svg";
 
 const IntroPage = ({pressed, setPressed, setAnimationEnd}) => {
 
-  const circles = ["w-2/12","w-3/12","w-4/12","w-5/12","w-6/12"];
+  // const circles = ["w-2/12","w-3/12","w-4/12","w-5/12","w-6/12"];
+  const circles = ["w-2/12","w-3/12","w-4/12"];
   const orientation = [1,-1,-1,1,-1,1,-1,1];
 
   const container = {
@@ -22,7 +23,7 @@ const IntroPage = ({pressed, setPressed, setAnimationEnd}) => {
         ease: "easeInOut",
         duration: 1,
       },
-      y:"-100%",
+      opacity: [1,0],
     }
   };
 

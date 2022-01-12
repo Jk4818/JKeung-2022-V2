@@ -18,6 +18,13 @@ function ProjectsMain(props) {
                 title
                 tags
                 date(formatString: "DD MMMM, YYYY")
+                image {
+                    childImageSharp {
+                    fluid(maxWidth: 800) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                } 
               }
               html
               id
@@ -80,6 +87,7 @@ function ProjectsMain(props) {
                 topic={project.node.frontmatter.type}
                 title={project.node.frontmatter.title}
                 tags={project.node.frontmatter.tags}
+                featuredImgFluid={project.node.frontmatter.image.childImageSharp.fluid}
               >
                 {project.node.html}
               </ProjectLarge>
