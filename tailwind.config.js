@@ -32,6 +32,9 @@ module.exports = {
       blur: {
         xs: '2px',
       },
+      zIndex: {
+        '100': '100',
+      },
       animation: {
         'spin-slow': 'spin 100s linear infinite',
         'spin-slow-1': 'spin 110s linear infinite',

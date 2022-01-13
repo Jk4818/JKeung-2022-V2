@@ -25,14 +25,14 @@ const IndexPage = () => {
 
       <IntroPage pressed={pressed} setPressed={setPressed}/>
 
-      <Layout>
+      {pressed && (<Layout>
         <Hero />
         <About />
         <Experience />
         <ProjectsMain />
         <ProjectsMore />
         <Contact />
-      </Layout>
+      </Layout>)}
       
     </main>
   );

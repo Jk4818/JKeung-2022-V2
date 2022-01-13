@@ -4,3 +4,10 @@
     font-size: 1.2rem;
     transform-origin: 0 100px;
 }
+
+@keyframes spin{
+    from { transform: rotate(0)}
+    to { transform: rotate(360)}
+}
+
+/* , animation: `spin 5s linear infinite` */
