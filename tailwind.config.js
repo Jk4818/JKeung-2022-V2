@@ -32,6 +32,10 @@ module.exports = {
       blur: {
         xs: '2px',
       },
+      screens: {
+        'ultrawide': '1921px',
+        'super-ultrawide': '2559px',
+      },
       zIndex: {
         '100': '100',
       },

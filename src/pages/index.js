@@ -10,6 +10,7 @@ import ProjectsMain from "../components/ProjectsMain";
 import ProjectsMore from "../components/ProjectsMore";
 import Contact from "../components/Contact";
 import IntroPage from "../components/Intro";
+import ProjectSmallModal from "../components/ProjectSmallModal";
 
 // data
 
@@ -26,6 +27,7 @@ const IndexPage = () => {
       <IntroPage pressed={pressed} setPressed={setPressed}/>
 
       {pressed && (<Layout>
+        {/* <ProjectSmallModal /> */}
         <Hero />
         <About />
         <Experience />

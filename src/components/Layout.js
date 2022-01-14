@@ -23,7 +23,7 @@ function Layout({ children }) {
     <div className="w-full">
       <Navbar />
 
-      <div>{children}</div>
+      <div className="">{children}</div>
 
       <footer className="font-roboto-mono tracking-wide text-blue-gray text-sm text-center m-4 mx-6 ">
         <div className="flex flex-col gap-2 items-center">

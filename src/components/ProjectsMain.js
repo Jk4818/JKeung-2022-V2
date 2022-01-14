@@ -38,24 +38,26 @@ function ProjectsMain(props) {
   return (
     <section
       id="main_projects"
-      className="my-20 relative w-full h-full font-roboto"
+      className="my-20 relative w-full h-full font-roboto flex justify-center"
     >
-      <motion.div
-        className="relative md:absolute md:top-0 xl:left-32 w-max z-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={{
-          visible: { opacity: 1},
-          hidden: { opacity: 0},
-        }}
-      >
-        <h1 className="font-bold md:scale-x-[-1] text-massive text-blue-gray">
-          03.
-        </h1>
-      </motion.div>
 
-      <section className="relative w-full flex flex-col gap-20 px-4 sm:px-40 xl:px-80">
+      <section className="relative px-4 w-full sm:w-3/4 xl:w-1/2 ultrawide:w-1/3 super-ultrawide:w-1/4 flex flex-col gap-20 ">
+
+        <motion.div
+          className="relative md:absolute md:top-0 left-0 xl:-left-32 w-max z-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+        >
+          <h1 className="font-bold md:scale-x-[-1] text-massive text-blue-gray">
+            03.
+          </h1>
+        </motion.div>
+
         <motion.div
           className="relative flex flex-col md:flex-row items-center justify-end gap-10 font-bold z-10"
           initial="hidden"
@@ -73,7 +75,7 @@ function ProjectsMain(props) {
         <div className="flex flex-col gap-10">
           {data.allMarkdownRemark.edges.map((project, index) => (
             <motion.div
-            key={project.node.id}
+              key={project.node.id}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}

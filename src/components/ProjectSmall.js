@@ -6,7 +6,9 @@ function ProjectSmall({ children, title, tags }) {
   return (
     <div className="w-full h-max aspect-square flex flex-col gap-4 p-6 px-8 bg-dark-gray rounded-xl shadow-container hover:-translate-y-2 transition-all">
       <div className="flex justify-between">
-        <RoundButton>Learn More</RoundButton>
+        <button>
+          <RoundButton>Learn More</RoundButton>
+        </button>
         <FiExternalLink
           size="20"
           className="text-blue-gray hover:stroke-stone-200 transition ease-in-out duration-300"

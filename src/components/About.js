@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 function About(props) {
   return (
-    <section id="about" className="relative w-full h-screen my-40 md:my-0">
+    <section id="about" className="relative w-full h-screen my-40 md:my-0 flex justify-center">
       <motion.div
-        className="relative w-full h-screen"
+        className="relative px-4 w-full sm:w-3/4 ultrawide:w-1/3 super-ultrawide:w-1/4 h-screen"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -16,7 +16,7 @@ function About(props) {
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 50 },
           }}
-          className="absolute -top-40 md:top-24 xl:left-32 w-max z-0"
+          className="absolute -top-40 md:top-24 xl:-left-32 w-max z-0"
         >
           <h1 className="font-bold md:scale-x-[-1] text-massive text-blue-gray">
             01.
@@ -27,7 +27,7 @@ function About(props) {
             visible: { opacity: 1, y: 0 },
             hidden: { opacity: 0, y: 50 },
           }}
-          className="relative w-full h-full px-5 sm:px-20 lg:px-40 xl:px-80 flex justify-center items-center z-10"
+          className="relative w-full h-full flex justify-center items-center z-10"
         >
           <div className="w-full h-full md:h-1/2 flex flex-col md:flex-row justify-end shadow-container shadow-black">
             <div className="container w-full h-1/2 md:w-1/2 md:h-full p-10 lg:p-20 bg-white self-start flex flex-col justify-center font-roboto text-p-gray">

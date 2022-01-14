@@ -16,8 +16,8 @@ const IntroPage = ({ pressed, setPressed }) => {
     },
     end: {
       transition: {
-        staggerChildren: 0.1,
-        delay: 1.5,
+        staggerChildren: 0.3,
+        delay: 2,
         ease: "easeInOut",
         duration: 1,
       },
@@ -38,7 +38,7 @@ const IntroPage = ({ pressed, setPressed }) => {
       //scale: [1,1, 1.1, 0, 0],
       opacity: 0,
       transition: {
-        duration: 2.5,
+        duration: 2,
         ease: "anticipate",
       },
     },
