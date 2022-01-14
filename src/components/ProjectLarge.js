@@ -4,12 +4,13 @@ import Img from "gatsby-image"
 function ProjectLarge({ type, children, title, topic, tags, featuredImgFluid }) {
   return (
     <div className="relative flex w-full h-full justify-center md:grid md:grid-cols-10 font-bold font-roboto tracking-wide">
+      
       <div
         className={`md:row-span-full self-center relative w-full opacity-30 md:opacity-100 blur-xs
         ${type === "right" ? `col-start-1 col-span-4` : `col-span-4 col-end-11`
           }`}
       >
-        <div className="after:bg-gradient-to-tr after:from-pink-500 after:via-red-500 after:to-yellow-500  after:h-full after:block after:absolute after:inset-0 after:opacity-70 hover:after:opcaity-0">
+        <div className="after:bg-gradient-to-tr after:from-pink-500 after:via-red-500 after:to-yellow-500  after:h-full after:block after:absolute after:inset-0 after:opacity-70 hover:after:opacity-0">
           <Img fluid={featuredImgFluid} />
         </div>
       </div>
@@ -22,6 +23,7 @@ function ProjectLarge({ type, children, title, topic, tags, featuredImgFluid }) 
           }  
         `}
       >
+
         <h2 className="text-md md:text-sm text-light-gray md:text-blue-gray">
           {topic}
         </h2>
@@ -46,6 +48,7 @@ function ProjectLarge({ type, children, title, topic, tags, featuredImgFluid }) 
               key={tag}>{tag}</li>
           ))}
         </ul>
+
       </div>
 
     </div>

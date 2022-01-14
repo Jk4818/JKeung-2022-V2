@@ -54,7 +54,7 @@ function ProjectsMore(props) {
       id="more_projects"
       className="relative w-full h-full font-roboto text-white py-10 flex justify-center"
     >
-      <div className="px-28 sm:px-0 w-full h-full sm:w-3/4 xl:w-1/2 ultrawide:w-1/3 super-ultrawide:w-1/4 ">
+      <div className="px-10 sm:px-0 w-full h-full sm:w-3/4 xl:w-1/2 ultrawide:w-1/3 super-ultrawide:w-1/4 ">
         
         <div className="flex flex-col md:flex-row font-bold items-center justify-between my-20">
           <h1>Other Noteworthy Works</h1>

@@ -16,12 +16,12 @@ const IntroPage = ({ pressed, setPressed }) => {
     },
     end: {
       transition: {
-        staggerChildren: 0.3,
-        delay: 2,
+        staggerChildren: 0.2,
+        delay: 1.5,
         ease: "easeInOut",
-        duration: 1,
+        duration: 0.5,
       },
-      opacity: [1, 0],
+      opacity: 0,
     }
   };
 
@@ -38,7 +38,7 @@ const IntroPage = ({ pressed, setPressed }) => {
       //scale: [1,1, 1.1, 0, 0],
       opacity: 0,
       transition: {
-        duration: 2,
+        duration: 1.5,
         ease: "anticipate",
       },
     },
@@ -52,7 +52,7 @@ const IntroPage = ({ pressed, setPressed }) => {
       },
     },
     end: {
-      scale: [1, 1, 1, 1, 2, 0],
+      scale: [1, 1, 1, 1, 2, 100],
       rotate: [0, 360],
       borderRadius: ["20%", "50%", "50%", "50%"],
       transition: {
