@@ -25,6 +25,7 @@ module.exports = {
       },
       letterSpacing: {
         logo: '0.4rem',
+        loader: '0.8rem',
       },
       boxShadow: {
         'container': '0 0 50px rgba(0, 0, 0, 0.5)',

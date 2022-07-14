@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
@@ -9,33 +9,47 @@ import Experience from "../components/Experience";
 import ProjectsMain from "../components/ProjectsMain";
 import ProjectsMore from "../components/ProjectsMore";
 import Contact from "../components/Contact";
-import IntroPage from "../components/Intro";
+// import IntroPage from "../components/Intro";
+import Loader from "../components/Loader";
 import ProjectSmallModal from "../components/ProjectSmallModal";
+import RoundButton from '../components/RoundButton';
 
 // data
 
 // markup
 const IndexPage = () => {
-  const [pressed, setPressed] = useState(false);
-  
-  
-  
+  const [active, setActive] = useState(true);
+
+
+  const [showModal, setShowModal] = React.useState(false);
+
   return (
-    <main className="overflow-x-hidden w-screen min-h-screen h-max bg-dark-gray text-white">
+    <main className=" w-screen min-h-screen h-max bg-dark-gray text-white">
       <title>Home Page</title>
 
-      <IntroPage pressed={pressed} setPressed={setPressed}/>
+      <Loader setActive={setActive} />
+      {(
+        !active &&
+        <Layout>
+          <Hero />
+          <About />
+          <Experience />
+          <ProjectsMain />
+          <ProjectsMore />
+          <Contact />
 
-      {pressed && (<Layout>
-        {/* <ProjectSmallModal /> */}
-        <Hero />
-        <About />
-        <Experience />
-        <ProjectsMain />
-        <ProjectsMore />
-        <Contact />
-      </Layout>)}
-      
+          <button
+            className=""
+            type="button"
+            onClick={() => setShowModal(true)}
+          >
+            <RoundButton>Learn More</RoundButton>
+          </button>
+
+          <ProjectSmallModal showModal={showModal} setShowModal={setShowModal}/>
+        </Layout>
+
+      )}
     </main>
   );
 };

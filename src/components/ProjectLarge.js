@@ -10,7 +10,7 @@ function ProjectLarge({ type, children, title, topic, tags, featuredImgFluid }) 
         ${type === "right" ? `col-start-1 col-span-4` : `col-span-4 col-end-11`
           }`}
       >
-        <div className="after:bg-gradient-to-tr after:from-pink-500 after:via-red-500 after:to-yellow-500  after:h-full after:block after:absolute after:inset-0 after:opacity-70 hover:after:opacity-0">
+        <div className="after:bg-gradient-to-tr after:from-pink-500 after:via-red-500 after:to-yellow-500  after:h-full after:block after:absolute after:inset-0 after:opacity-70 ">
           <Img fluid={featuredImgFluid} />
         </div>
       </div>
