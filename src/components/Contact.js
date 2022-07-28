@@ -21,7 +21,7 @@ function Contact(props) {
           <p>jiang7866@yahoo.co.uk</p>
           <div className="w-full mt-10 flex flex-col  items-center">
             <h3>For all visual/audio work</h3>
-            <SquareButton> Learn More</SquareButton>
+            <SquareButton link="https://iamjkeung.studio/"> Learn More</SquareButton>
           </div>
         </div>
         <div className="hidden md:block w-40 z-30">

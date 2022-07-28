@@ -227,7 +227,7 @@ function Navbar(props) {
                 </li>
               </button>
               <div className="self-center ">
-                <SquareButton color="white"> Resume </SquareButton>
+                <SquareButton color="white" link="https://firebasestorage.googleapis.com/v0/b/jkeung2022.appspot.com/o/CV_2022.pdf?alt=media&token=bdb9d8ac-11b3-43e9-b868-ca62d69e9ec1"> Resume </SquareButton>
               </div>
             </ul>
           </div>

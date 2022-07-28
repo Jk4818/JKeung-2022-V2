@@ -56,6 +56,7 @@ function Hero(props) {
               <SquareButton
                 border="border-vibrant-orange"
                 text="text-vibrant-orange"
+                link="https://iamjkeung.studio/"
               >
                 stuff
               </SquareButton>

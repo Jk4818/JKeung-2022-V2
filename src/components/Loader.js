@@ -67,13 +67,13 @@ function Loader({setActive}) {
             />
           </pattern>
           <text
-            className="text-3xl font-roboto font-semibold text-white tracking-loader uppercase"
+            className="text-2xl font-roboto font-semibold text-white tracking-loader uppercase"
             textAnchor="middle"
             x="50%"
             y="50%"
             style={{ fill: "url(#pattern)" }}
           >
-            jkeung.me
+            jkeung.tech
           </text>
         </motion.svg>
       </motion.div>

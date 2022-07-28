@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from "gatsby";
 
 function SquareButton(props) {
     return (
-        <button className={`w-max ${props.border} border-4 p-1 px-4 tracking-widest font-roboto font-bold ${props.text} text-xs hover:bg-stone-800 transition-all`}>
-           <Link to="/">{props.children}</Link>
-        </button>
+        <a href={props.link} target="_blank" rel="noreferrer">
+            <button className={`w-max ${props.border} border-4 p-1 px-4 tracking-widest font-roboto font-bold ${props.text} text-xs hover:bg-stone-800 transition-all`}>
+                {props.children}
+            </button>
+        </a>
     );
 }
 
