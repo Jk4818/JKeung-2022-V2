@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import ProjectSmall from "./ProjectSmall";
 import RoundButton from "./RoundButton";
 
-function ProjectsMore(props) {
+function ProjectsMore({setShowModal}) {
   const [show, setShow] = useState(false);
 
   function handleClick(state) {
@@ -54,7 +54,7 @@ function ProjectsMore(props) {
       id="more_projects"
       className="relative w-full h-full font-roboto text-white py-10 flex justify-center"
     >
-      <div className="px-10 sm:px-0 w-full h-full sm:w-3/4 xl:w-1/2 ultrawide:w-1/3 super-ultrawide:w-1/4 ">
+      <div className="px-20 sm:px-0 w-full h-full sm:w-3/4 xl:w-1/2 ultrawide:w-1/3 super-ultrawide:w-1/4 ">
         
         <div className="flex flex-col md:flex-row font-bold items-center justify-between my-20">
           <h1>Other Noteworthy Works</h1>
@@ -80,6 +80,8 @@ function ProjectsMore(props) {
               <ProjectSmall
                 title={project.node.frontmatter.title}
                 tags={project.node.frontmatter.tags}
+                setShowModal={setShowModal}
+                fullDesc={project.node.html}
               >
                 {project.node.excerpt}
               </ProjectSmall>

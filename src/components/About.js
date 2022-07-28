@@ -39,10 +39,10 @@ function About(props) {
               </h3>
               <div className="mt-12">
                 <p>
-                  I'm a UK born Chinese currently studying an MEng in Electronic
+                  I'm a UK born Chinese now graduating with an MEng in Electronic
                   and Information Engineering at Imperial College London. Highly
                   self-driven, my interest in technology is broad with
-                  particular interest on music technology, photography and
+                  particular interest on front-end development and
                   full-stack systems.
                 </p>
               </div>

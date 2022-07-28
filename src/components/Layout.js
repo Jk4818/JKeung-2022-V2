@@ -20,10 +20,10 @@ function Layout({ children }) {
   );
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-x-hidden">
       <Navbar />
 
-      <div className="">{children}</div>
+      <div className="w-full overflow-x-hidden relative">{children}</div>
 
       <footer className="font-roboto-mono tracking-wide text-blue-gray text-sm text-center m-4 mx-6 ">
         <div className="flex flex-col gap-2 items-center">

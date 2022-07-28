@@ -1,9 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import Jdk from "../assets/jdk.svg";
-import Odd from "../assets/odd.svg";
-import Aon from "../assets/aon.svg";
+import { StaticImage } from "gatsby-plugin-image";
 
 function Experience(props) {
   const variant = {
@@ -40,22 +38,40 @@ function Experience(props) {
           transition={{ duration: 0.2, staggerChildren: 0.1 }}
         >
           <motion.div
-            className="w-1/3 md:w-40 flex justify-center"
+            className="w-1/3 flex justify-center"
             variants={variant}
           >
-            <Jdk />
+            <StaticImage
+              src="../images/aon_logo.png"
+              alt="AON Logo"
+              placeholder="blurred"
+              layout="constrained"
+              width={200}
+            />
           </motion.div>
           <motion.div
-            className="w-1/3 md:w-max flex justify-center"
+            className="w-1/3 flex justify-center"
             variants={variant}
           >
-            <Odd />
+            <StaticImage
+              src="../images/jdk_logo.webp"
+              alt="JDK Logo"
+              placeholder="blurred"
+              layout="constrained"
+              width={200}
+            />
           </motion.div>
           <motion.div
-            className="w-1/3 md:w-40 flex justify-center"
+            className="w-1/4 flex justify-center"
             variants={variant}
           >
-            <Aon />
+            <StaticImage
+              src="../images/odd_logo.png"
+              alt="ODD Logo"
+              placeholder="blurred"
+              layout="constrained"
+              width={200}
+            />
           </motion.div>
         </motion.div>
       </div>

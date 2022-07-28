@@ -12,7 +12,6 @@ import Contact from "../components/Contact";
 // import IntroPage from "../components/Intro";
 import Loader from "../components/Loader";
 import ProjectSmallModal from "../components/ProjectSmallModal";
-import RoundButton from '../components/RoundButton';
 
 // data
 
@@ -21,33 +20,27 @@ const IndexPage = () => {
   const [active, setActive] = useState(true);
 
 
-  const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = useState({title: "", tags: "", fullDesc: ""});
 
   return (
-    <main className=" w-screen min-h-screen h-max bg-dark-gray text-white">
+    <main className=" min-h-screen h-max bg-dark-gray text-white">
       <title>Home Page</title>
 
-      <Loader setActive={setActive} />
+      
       {(
-        !active &&
+        !active ?
         <Layout>
           <Hero />
           <About />
           <Experience />
           <ProjectsMain />
-          <ProjectsMore />
+          <ProjectsMore setShowModal={setShowModal}/>
           <Contact />
-
-          <button
-            className=""
-            type="button"
-            onClick={() => setShowModal(true)}
-          >
-            <RoundButton>Learn More</RoundButton>
-          </button>
 
           <ProjectSmallModal showModal={showModal} setShowModal={setShowModal}/>
         </Layout>
+        :
+        <Loader setActive={setActive} />
 
       )}
     </main>
