@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://jkeung2022v2main.gatsbyjs.io/",
     title: "Jason Keung",
     description: "Jason Keung | Professional Portfolio",
     author: "Jason Keung",
@@ -8,6 +8,14 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-smoothscroll",
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {},
+        allPageHeaders: [],
+        mergeSecurityHeaders: false,
+      },
+    },
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
