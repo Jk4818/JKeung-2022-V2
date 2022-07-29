@@ -8,4 +8,6 @@ image: ../images/odd.png
 ---
 
 Implemented an **Arduino Uno** keyboard synthesizer with IOT enabled communication for multi synth playability.
+
+</br>
 Functions: live UI, 4 different audio wave synthesis, polyphony, modulation and pitch shift.

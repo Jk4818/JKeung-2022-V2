@@ -98,8 +98,8 @@ function Hero(props) {
       >
         <div className="absolute w-max h-max bottom-0 right-auto left-10 flex flex-col justify-center items-center">
           <div className="w-0.5 h-28 bg-white"></div>
-          <p className="my-2 font-bold vertical-rl rotate-180">
-            jiang7866@yahoo.co.uk
+          <p className="my-2 font-bold vertical-rl rotate-180 tracking-wide">
+            contact@jkeung.tech
           </p>
           <div className="w-0.5 h-28 bg-white"></div>
         </div>

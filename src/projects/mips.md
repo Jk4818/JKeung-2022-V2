@@ -9,6 +9,8 @@ image: ../images/odd.png
 
 Designed and programmed a functional MIPS assembly language simulator and compiler using **C++**.
 
+</br>
 It is able to implement register files, program counters, memory etc, then execute relevant MIPS instructions according to the MIPS ISA.
 
+</br>
 Automated test benching with **Bash** to analyze performance and correctness of simulator.
