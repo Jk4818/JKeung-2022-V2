@@ -20,7 +20,7 @@ function ProjectsMain(props) {
                 date(formatString: "DD MMMM, YYYY")
                 image {
                     childImageSharp {
-                    fluid(maxWidth: 800) {
+                    fluid(maxWidth: 1000) {
                       ...GatsbyImageSharpFluid
                     }
                   }

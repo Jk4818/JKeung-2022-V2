@@ -35,9 +35,9 @@ function ProjectSmallModal({showModal, setShowModal }) {
                     <h3 className="text-2xl text-white font-semibold">
                       {showModal.title}
                     </h3>
-                    <p className="my-4 text-white text-left text-md leading-relaxed">
-                      <div dangerouslySetInnerHTML={{ __html: showModal.fullDesc }}></div>
-                    </p>
+                    <div className="my-4 text-white text-left text-md leading-relaxed">
+                      <p dangerouslySetInnerHTML={{ __html: showModal.fullDesc }}></p>
+                    </div>
                   </div>
                   {/*footer*/}
                   <div className="flex items-center justify-start p-6 rounded-b">
