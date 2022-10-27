@@ -31,7 +31,7 @@ function Experience(props) {
           <h1>Few companies I've enjoyed working with</h1>
         </motion.div>
         <motion.div
-          className="my-10 px-4 w-full  h-full flex flex-wrap justify-center gap-10 md:justify-between items-center "
+          className="my-10 px-4 w-full  h-full flex flex-wrap justify-evenly gap-10 md:justify-between items-center "
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -62,7 +62,7 @@ function Experience(props) {
             />
           </motion.div>
           <motion.div
-            className="w-1/4 flex justify-center"
+            className="w-1/3 md:w-full flex justify-center"
             variants={variant}
           >
             <StaticImage

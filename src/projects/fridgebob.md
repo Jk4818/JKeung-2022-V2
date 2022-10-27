@@ -2,7 +2,7 @@
 title: "IOT Fridge Sensor"
 type: "Embedded Systems"
 date: "2020-01-18"
-featured: true
+featured: false
 tags: ["Python", "MQTT", "Raspberry Pi", "HTML"]
 image: ../images/fridge.png
 ---
